@@ -1,0 +1,14 @@
+import tkinter as tk
+from tkinter import ttk
+ 
+root=tk.Tk()
+    
+root.title("Images")
+root.geometry("500x200")
+root.config(bg="Black")
+   
+image=tk.PhotoImage(file=r"C:\Users\mythi\Downloads\Among-Us.gif")
+image_label=tk.Label(root, image=image)
+        
+image_label.pack()
+root.mainloop()
