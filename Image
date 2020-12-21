@@ -1,14 +1,20 @@
 import tkinter as tk
 from tkinter import ttk
- 
+
 root=tk.Tk()
-    
+
 root.title("Images")
-root.geometry("500x200")
+root.geometry("500x500")
 root.config(bg="Black")
-   
-image=tk.PhotoImage(file=r"C:\Users\mythi\Downloads\Among-Us.gif")
+
+image=tk.PhotoImage(file=r"D:\Mythili\Python\test.gif")
 image_label=tk.Label(root, image=image)
-        
-image_label.pack()
+
+def test():
+    image_label.pack()
+
+image2=tk.PhotoImage(file=r"D:\Mythili\Python\test1.gif")
+btn=tk.Button(root,image=image2,command=test)
+
+btn.pack()
 root.mainloop()
