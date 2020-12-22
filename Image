@@ -3,18 +3,37 @@ from tkinter import ttk
 
 root=tk.Tk()
 
-root.title("Images")
+root.title("Greetings from Mickey")
 root.geometry("500x500")
 root.config(bg="Black")
 
-image=tk.PhotoImage(file=r"D:\Mythili\Python\test.gif")
-image_label=tk.Label(root, image=image)
+mickey=tk.PhotoImage(file=r"D:\Mythili\Python\MickeyMouse.gif")
+mickey_label=tk.Label(root,image=mickey)
+mickey_label.pack(pady=10)
 
-def test():
-    image_label.pack()
+greetings_label=tk.Label(root,text="Greetings from the DisneyLand!\nYou've been invited for a free trip to DisneyLand!\nDo you want to join?!",fg="White",bg="Red")
+greetings_label.config(font=("Berlin Sans FB",22))
+greetings_label.pack()
 
-image2=tk.PhotoImage(file=r"D:\Mythili\Python\test1.gif")
-btn=tk.Button(root,image=image2,command=test)
+yes_label=tk.Label(text="Great! Please enter you mail password for further details!",fg="White",bg="Red")
+yes_label.config(font=("Berlin Sans FB",22))
 
-btn.pack()
+no_label=tk.Label(text="Oh Okay... You missed the oppurtunity!",fg="White",bg="Red")
+no_label.config(font=("Berlin Sans FB",22))
+
+def yes_click():
+    yes_label.pack()
+
+def no_click():
+    no_label.pack()
+
+yes_btn=tk.Button(root,text="Yes! It would be a pleasure to join!",command=yes_click)
+yes_btn.config(font=("Berlin Sans FB",22))
+
+no_btn=tk.Button(root,text="No,Thanks for the invitation!",command=no_click)
+no_btn.config(font=("Berlin Sans FB",22))
+
+
+yes_btn.pack()
+no_btn.pack()
 root.mainloop()
